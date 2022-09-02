@@ -16,17 +16,17 @@ const vegetables = [
   },
 ];
 
+const metric = "plumpness";
+
 const judgeVegetable = function (vegetables, metric) {
   let bestVeggie = vegetables[0];
 
   for (let i = 0; i < vegetables.length; i++) {
     if (vegetables[i][metric] > bestVeggie[metric]) {
-      bestVeggie = vegetables[i][metric];
+      bestVeggie = vegetables[i];
     }
   }
   return bestVeggie.submitter;
 };
-
-const metric = "redness";
 
 console.log(judgeVegetable(vegetables, metric));
